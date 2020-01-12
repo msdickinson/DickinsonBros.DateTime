@@ -1,6 +1,6 @@
 # DickinsonBros.DateTime
 
-A wrapper Library for DateTime
+A wrapper library for DateTime
 
 Features
 * Adds extensibility via abstraction
