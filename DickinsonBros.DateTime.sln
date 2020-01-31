@@ -9,9 +9,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Library", "1 Library", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DickinsonBros.DateTime.Tests", "DickinsonBros.DateTime.Tests\DickinsonBros.DateTime.Tests.csproj", "{1FE73EFB-8105-4E39-86F2-A501A3641710}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9 Scripts", "9 Scripts", "{277344BC-4C4C-4BAA-905D-482CC1FF7E8D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9 Misc", "9 Misc", "{7B5B9359-6239-43D0-AE50-6769588587A6}"
 	ProjectSection(SolutionItems) = preProject
-		Scripts\CreateNugetPackageCI.ps1 = Scripts\CreateNugetPackageCI.ps1
+		CreateNugetPackageCI.ps1 = CreateNugetPackageCI.ps1
+		DickinsonBros.DateTime.runsettings = DickinsonBros.DateTime.runsettings
+		Scripts\Publish.yml = Scripts\Publish.yml
+		Scripts\Test.yml = Scripts\Test.yml
 	EndProjectSection
 EndProject
 Global
