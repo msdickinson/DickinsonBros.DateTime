@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9 Misc", "9 Misc", "{7B5B93
 		Scripts\Test.yml = Scripts\Test.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Runner", "2 Runner", "{CC15E346-93D2-48D4-AE02-657BA87761CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DickinsonBros.DateTime.Runner", "DickinsonBros.DateTime.Runner\DickinsonBros.DateTime.Runner.csproj", "{D4D7ABCD-235D-4FDF-AB8D-7B97B9CC6CC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,10 @@ Global
 		{1FE73EFB-8105-4E39-86F2-A501A3641710}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FE73EFB-8105-4E39-86F2-A501A3641710}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FE73EFB-8105-4E39-86F2-A501A3641710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4D7ABCD-235D-4FDF-AB8D-7B97B9CC6CC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D7ABCD-235D-4FDF-AB8D-7B97B9CC6CC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D7ABCD-235D-4FDF-AB8D-7B97B9CC6CC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D7ABCD-235D-4FDF-AB8D-7B97B9CC6CC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +46,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{81566909-1B0E-4969-83F0-73DA08735BFB} = {57A4CCE8-175E-4532-BBEA-C73235F7C714}
 		{1FE73EFB-8105-4E39-86F2-A501A3641710} = {57A4CCE8-175E-4532-BBEA-C73235F7C714}
+		{D4D7ABCD-235D-4FDF-AB8D-7B97B9CC6CC7} = {CC15E346-93D2-48D4-AE02-657BA87761CA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {352074D2-D816-4D3E-ACC6-39BB7D2A3F68}
