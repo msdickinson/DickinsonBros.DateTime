@@ -1,4 +1,5 @@
 ﻿using DickinsonBros.DateTime.Abstractions;
+using DickinsonBros.DateTime.Extensions;
 using DickinsonBros.DateTime.Runner.Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -30,19 +31,8 @@ namespace DickinsonBros.DateTime.Runner
                     {
                         var dateTimeService = provider.GetRequiredService<IDateTimeService>();
 
-                        Console.WriteLine
-                        (
-$@"DateTimeUTC 1: 
-{dateTimeService.GetDateTimeUTC()}
-
-DateTimeUTC 2: 
-{dateTimeService.GetDateTimeUTC().ToShortDateString()}
-
-DateTimeUTC 3:
-{dateTimeService.GetDateTimeUTC().ToLongDateString()}
-
-"
-                        );
+                        var date = dateTimeService.GetDateTimeUTC();
+                        Console.WriteLine(date);
                     }
                     applicationLifetime.StopApplication();
                     await Task.CompletedTask.ConfigureAwait(false);
@@ -72,7 +62,7 @@ DateTimeUTC 3:
                 }
             });
             services.AddSingleton<IApplicationLifetime>(applicationLifetime);
-            services.AddSingleton<IDateTimeService, DateTimeService>();
+            services.AddDateTimeService();
         }
 
         IServiceCollection InitializeDependencyInjection()
