@@ -26,7 +26,7 @@ Example Runner Included in folder "DickinsonBros.DateTime.Runner"
 
 <h2>Setup</h2>
 
-<i>Add Nuget References</i>
+<h3>Add Nuget References</h3>
 
     https://www.nuget.org/packages/DickinsonBros.DateTime/
     https://www.nuget.org/packages/DickinsonBros.DateTime.Abstractions
