@@ -1,4 +1,4 @@
-﻿using DickinsonBros.DateTime.Abstractions;
+using DickinsonBros.DateTime.Abstractions;
 using DickinsonBros.DateTime.Extensions;
 using DickinsonBros.DateTime.Runner.Services;
 using Microsoft.AspNetCore.Hosting;
