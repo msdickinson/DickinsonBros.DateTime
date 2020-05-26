@@ -33,8 +33,6 @@ Example Runner Included in folder "DickinsonBros.DateTime.Runner"
 
 <h3>Create Instance</h3>
 
-<i>Code</i>
-
 ```C#    
 using DickinsonBros.DateTime;
 
@@ -45,7 +43,6 @@ var dateTimeService = new DateTimeService()
 
 <h3>Create Instance (With Dependency Injection)</h3>
 
-<i>Code</i>
 ```C#        
 using DickinsonBros.DateTime.Abstractions;
 using DickinsonBros.DateTime.Extensions;
