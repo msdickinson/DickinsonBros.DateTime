@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DickinsonBros.DateTime.Test
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9 Misc", "9 Misc", "{7B5B9359-6239-43D0-AE50-6769588587A6}"
 	ProjectSection(SolutionItems) = preProject
-		CreateNugetPackageCI.ps1 = CreateNugetPackageCI.ps1
+		Scripts\CreateNugetPackageCI.ps1 = Scripts\CreateNugetPackageCI.ps1
 		DickinsonBros.DateTime.runsettings = DickinsonBros.DateTime.runsettings
 		Scripts\Publish.yml = Scripts\Publish.yml
 		Scripts\Test.yml = Scripts\Test.yml
@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9 Misc", "9 Misc", "{7B5B93
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Runner", "2 Runner", "{CC15E346-93D2-48D4-AE02-657BA87761CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DickinsonBros.DateTime.Runner", "DickinsonBros.DateTime.Runner\DickinsonBros.DateTime.Runner.csproj", "{D4D7ABCD-235D-4FDF-AB8D-7B97B9CC6CC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DickinsonBros.DateTime.Runner", "DickinsonBros.DateTime.Runner\DickinsonBros.DateTime.Runner.csproj", "{D4D7ABCD-235D-4FDF-AB8D-7B97B9CC6CC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

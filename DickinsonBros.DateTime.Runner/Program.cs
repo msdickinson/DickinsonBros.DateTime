@@ -1,9 +1,9 @@
 ﻿using DickinsonBros.DateTime.Abstractions;
 using DickinsonBros.DateTime.Extensions;
 using DickinsonBros.DateTime.Runner.Services;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
 using System.IO;
@@ -22,21 +22,18 @@ namespace DickinsonBros.DateTime.Runner
         {
             try
             {
-                using (var applicationLifetime = new ApplicationLifetime())
+                var services = InitializeDependencyInjection();
+                ConfigureServices(services);
+
+                using (var provider = services.BuildServiceProvider())
                 {
-                    var services = InitializeDependencyInjection();
-                    ConfigureServices(services, applicationLifetime);
-
-                    using (var provider = services.BuildServiceProvider())
-                    {
-                        var dateTimeService = provider.GetRequiredService<IDateTimeService>();
-
-                        var date = dateTimeService.GetDateTimeUTC();
-                        Console.WriteLine(date);
-                    }
-                    applicationLifetime.StopApplication();
-                    await Task.CompletedTask.ConfigureAwait(false);
+                    var dateTimeService = provider.GetRequiredService<IDateTimeService>();
+                    var hostApplicationLifetime = provider.GetService<IHostApplicationLifetime>();
+                    var date = dateTimeService.GetDateTimeUTC();
+                    Console.WriteLine(date);
+                    hostApplicationLifetime.StopApplication();
                 }
+                await Task.CompletedTask.ConfigureAwait(false);
             }
             catch (Exception e)
             {
@@ -49,7 +46,7 @@ namespace DickinsonBros.DateTime.Runner
             }
         }
 
-        private void ConfigureServices(IServiceCollection services, ApplicationLifetime applicationLifetime)
+        private void ConfigureServices(IServiceCollection services)
         {
             services.AddOptions();
             IServiceCollection serviceCollection = services.AddLogging(config =>
@@ -61,7 +58,7 @@ namespace DickinsonBros.DateTime.Runner
                     config.AddConsole();
                 }
             });
-            services.AddSingleton<IApplicationLifetime>(applicationLifetime);
+            services.AddSingleton<IHostApplicationLifetime, HostApplicationLifetime>();
             services.AddDateTimeService();
         }
 
