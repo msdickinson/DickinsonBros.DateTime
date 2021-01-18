@@ -18,5 +18,5 @@ Console.WriteLine(date);
 
     5/26/2020 8:58:20 PM
 
-[Sample Runner](https://github.com/msdickinson/DickinsonBros.DateTime/tree/master/DickinsonBros.DateTime.Runner)
+[Sample Runner](/Runner/DickinsonBros.DateTime.Runner)
 
